@@ -4,6 +4,8 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  padding: 1.25rem 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 header nav {
@@ -32,7 +34,8 @@ header nav[aria-expanded='true'] {
 
 @media (width >= 900px) {
   header .nav-wrapper {
-    position: relative;
+    /* position: relative; */
+    position: fixed;
   }
 
   header nav {
@@ -224,8 +227,9 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 6px;
     margin: 0;
+    justify-content: flex-end;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -269,4 +273,23 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+/* custom css for WKND */
+.default-content-wrapper h1 {
+  margin: 0;
+}
+.default-content-wrapper h1 a {
+  text-decoration: none;
+  color: #000 !important;
+}
+.default-content-wrapper ul li a {
+  text-decoration: none;
+  padding: 15px 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000 !important;
+}
+.default-content-wrapper ul li a:hover {
+  background-color: gold;
 }

@@ -3,8 +3,13 @@ export default function decorate(block) {
   block.classList.add(`columns-${cols.length}-cols`);
 
   // setup image columns
+  let colIndex = 1;
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
+      // Add simple incremental custom class to each individual column div
+      col.classList.add(`custom-col-${colIndex}`);
+      colIndex++;
+
       const pic = col.querySelector('picture');
       if (pic) {
         const picWrapper = pic.closest('div');

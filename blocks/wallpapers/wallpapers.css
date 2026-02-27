@@ -1,0 +1,112 @@
+
+.block.climbing-nz {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+.cnz-hero {
+  width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+.cnz-hero picture {
+  display: block;
+  width: 100%;
+}
+
+.cnz-hero picture img,
+.cnz-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Content Card — overlaps image at bottom-left */
+.cnz-card {
+  position: relative;
+  background: #ffffff;
+  padding: 2rem 2rem 0rem;
+  margin-top: -12.45rem;
+  margin-right: 15%;
+  margin-left: 0;
+  z-index: 1;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Heading */
+.cnz-heading {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #111111;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+/* Description */
+.cnz-desc {
+  font-size: clamp(0.875rem, 1.3vw, 14px);
+  color: #333333;
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+
+/* CTA Button */
+.cnz-cta {
+  display: inline-block;
+  background: #f5d600;
+  color: #202020 !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.75rem;
+}
+
+.cnz-cta:hover {
+    text-decoration: none;
+}
+
+/* Responsive */
+
+/* Large tablet and below */
+@media (max-width: 1024px) {
+  .cnz-card {
+    margin-right: 10%;
+    margin-top: -5rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .cnz-card {
+    margin-right: 5%;
+    margin-top: -4rem;
+    padding: 1.5rem 1.5rem 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .cnz-card {
+    margin-right: 0;
+    margin-top: -3rem;
+    padding: 1.25rem 1rem 1.75rem;
+  }
+
+  .cnz-cta {
+    display: block;
+    text-align: center;
+  }
+}
+.adv-section .wallpapers-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: fit-content;
+}

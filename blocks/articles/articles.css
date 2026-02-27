@@ -1,0 +1,347 @@
+/* article-layout block */
+
+.block.article-layout *,
+.block.article-layout *::before,
+.block.article-layout *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.block.article-layout {
+  width: 100%;
+  background: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1a1a1a;
+}
+
+/* breadcrumbs */
+.art-crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.6rem 4rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+}
+
+.art-crumb {
+  color: #202020 !important;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.art-crumb:hover {
+  text-decoration: underline;
+}
+
+.art-crumb-cur {
+  font-weight: 600;
+  pointer-events: none;
+  color: gold !important;
+}
+
+.art-sep {
+  color: #bbb;
+  font-size: 0.6rem;
+  margin: 0 0.1rem;
+}
+
+/* two-col layout */
+.art-wrap {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+  align-items: start;
+  padding-top: 0;
+}
+
+/* left column */
+.art-main {
+  min-width: 0;
+}
+
+/* article title 36px */
+.art-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+/* author — uppercase small, no margin top */
+.art-body.art-author-line,
+.art-main > .art-body:first-of-type {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #202020;
+  line-height: 2.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.art-body {
+  font-size: 1rem;
+  line-height: 2.1;
+  color: #2a2a2a;
+  margin-bottom: 0;
+}
+
+.art-body + .art-body {
+  margin-top: 0;
+}
+
+/* section heading — text then yellow line below with gap */
+.art-heading {
+  font-size: 38px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #111;
+  margin: 2.5rem 0 0;
+  display: block;
+  padding-bottom: 0;
+}
+
+.art-yline {
+  display: block;
+  width: 2.2rem;
+  height: 3px;
+  background: #f5d600;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  position: static;
+}
+
+.art-quote {
+  background: #f2f2f0;
+  padding: 1.5rem 1.75rem;
+  margin: 1.75rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #111;
+}
+
+.art-quote p {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin-bottom: 0.8rem;
+}
+
+.art-qline {
+  display: block;
+  width: 1.8rem;
+  height: 3px;
+  background: #f5d600;
+}
+
+/* images */
+.art-img {
+  margin: 1.5rem 0;
+}
+
+.art-img picture,
+.art-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* right sidebar — border starts at label level */
+/* .art-side {
+  position: sticky;
+  top: 2rem;
+} */
+
+.art-side-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 1.25rem;
+}
+
+.art-side-nav {
+  border-left: 2px solid #d0d0d0;
+}
+
+.art-side-item {
+  padding: 0.6rem 0.9rem;
+  margin-left: -2px;
+  border-left: 2px solid transparent;
+  transition: background 0.15s ease, border-left-color 0.15s ease;
+  cursor: pointer;
+}
+
+/* gap between items */
+.art-side-item + .art-side-item {
+  margin-top: 0.5rem;
+}
+
+/* hover — yellow bg + black left border replaces grey line */
+.art-side-item:hover {
+  background: #f5d600;
+  border-left-color: #111;
+}
+
+.art-side-item:hover .art-side-link {
+  color: #111;
+}
+
+.art-side-link:hover {
+  text-decoration: none;
+}
+
+.art-side-item:hover .art-side-meta {
+  color: #333;
+}
+
+/* active item — yellow bg + black left border */
+.art-side-item-on {
+  background: #f5d600;
+  border-left-color: #111;
+}
+
+.art-side-item-on .art-side-link {
+  color: #111;
+}
+
+.art-side-item-on .art-side-meta {
+  color: #333;
+}
+
+.art-side-link {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #202020 !important;
+  text-decoration: none;
+  line-height: 22px;
+  margin-bottom: 1rem;
+}
+
+.art-side-meta {
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.58rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .art-wrap {
+    grid-template-columns: 1fr 220px;
+    gap: 2rem;
+    padding: 1.5rem 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .art-wrap {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .art-side {
+    position: static;
+    padding-top: 1.5rem;
+    border-top: 2px solid #ddd;
+  }
+
+  .art-side-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    border-left: none;
+    border-top: 2px solid #d0d0d0;
+    padding-top: 0.5rem;
+  }
+
+  .art-side-item {
+    flex: 1 1 calc(50% - 0.2rem);
+    border-left: 2px solid transparent;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .art-crumbs {
+    padding: 0.5rem 1rem;
+  }
+
+  .art-wrap {
+    padding: 1rem 0.9rem 1.5rem;
+  }
+
+  .art-title {
+    font-size: 28px;
+  }
+
+  .art-side-nav {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .art-side-item {
+    flex: unset;
+    border-left: 3px solid transparent;
+  }
+}
+.trips-data .columns-wrapper {
+  padding: 0 4rem;
+}
+.trips-heading .custom-col-2 {
+  text-align: center;
+}
+.trips-data .art-crumb {
+  font-size: 16px;
+  line-height: 20px;
+}
+.trips-heading .custom-col-1 p:nth-of-type(1) {
+  font-size: 40px;
+  line-height: 52px;
+  margin-top: 12px;
+}
+.art-side {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.art-body-2 {
+  background-color: #888;
+  padding: 1rem 3rem;
+  margin-bottom: 2rem;
+}
+.art-body-2 blockquote {
+  margin: 0;
+}
+.art-body-2 blockquote p {
+  font-size: 36px;
+  line-height: 52px;
+}
+.trips-heading .custom-col-1 p:nth-of-type(2) {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 26px;
+}

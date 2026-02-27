@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--light-color);
+  background-color: #000;
   font-size: var(--body-font-size-xs);
 }
 
@@ -17,4 +17,43 @@ footer .footer p {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
+}
+footer p, a {
+  color: #fff !important;
+}
+footer #wknd {
+  color: #fff;
+}
+footer .section:nth-child(1) .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-bottom: 2.5rem;
+}
+footer .section:nth-child(1) .default-content-wrapper p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 3rem;
+}
+footer .section:nth-child(2) .default-content-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 14px;
+  line-height: 20px;
+}
+footer .section:nth-child(2) .default-content-wrapper p a {
+  text-decoration: underline;
+}
+.wknd-footer-section .default-content-wrapper p:nth-child(3) {
+  background-color: #fff !important;
+  padding: 1rem;
+}
+.wknd-footer-section .default-content-wrapper p:nth-child(3) a {
+  display: flex;
 }

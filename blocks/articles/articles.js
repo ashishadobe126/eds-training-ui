@@ -111,17 +111,23 @@ export default function decorate(block) {
 
       [...node.querySelectorAll('li')].forEach((li) => {
         const a = li.querySelector('a');
-        const isActive = a && new URL(a.href, window.location.href).pathname === window.location.pathname;
+        const currentPath = window.location.pathname;
+        const linkPath = a && new URL(a.href, window.location.href).pathname;
+        const isActive = a && linkPath === currentPath;
         const item = document.createElement('div');
         item.className = isActive ? 'art-side-item art-side-item-on' : 'art-side-item';
 
         if (a) {
           const fullText = a.textContent.trim();
-          const dateMatch = fullText.match(/((?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+\d{1,2}\s+\w+\s+\d{4}|\d{1,2}\s+\w+\s+\d{4})/i);
+          const dateRegex = /((?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+\d{1,2}\s+\w+\s+\d{4}|\d{1,2}\s+\w+\s+\d{4})/i;
+          const dateMatch = fullText.match(dateRegex);
+          const titleText = dateMatch
+            ? fullText.slice(0, fullText.indexOf(dateMatch[0])).trim()
+            : fullText;
           const link = document.createElement('a');
           link.className = 'art-side-link';
           link.href = a.href;
-          link.textContent = dateMatch ? fullText.slice(0, fullText.indexOf(dateMatch[0])).trim() : fullText;
+          link.textContent = titleText;
           item.appendChild(link);
           if (dateMatch) {
             const meta = document.createElement('span');
@@ -186,7 +192,7 @@ export default function decorate(block) {
     const homeLink = document.createElement('a');
     homeLink.href = '/';
     homeLink.className = 'art-crumb';
-    homeLink.textContent = 'Magazines';
+    homeLink.textContent = 'Home';
     crumbs.appendChild(homeLink);
 
     segments.forEach((seg, i) => {
@@ -196,7 +202,7 @@ export default function decorate(block) {
       crumbs.appendChild(sep);
 
       const a = document.createElement('a');
-      a.href = '/' + segments.slice(0, i + 1).join('/');
+      a.href = `/${segments.slice(0, i + 1).join('/')}`;
       a.textContent = decodeURIComponent(seg.replace(/-/g, ' '));
       a.className = i === segments.length - 1 ? 'art-crumb art-crumb-cur' : 'art-crumb';
       crumbs.appendChild(a);

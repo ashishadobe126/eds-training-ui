@@ -27,11 +27,9 @@
 /* Content Card — overlaps image at bottom-left */
 .cnz-card {
   position: relative;
-  background: #ffffff;
-  padding: 2rem 2rem 0rem;
+  background: #fff;
+  padding: 2rem 2rem 0;
   margin-top: -12.45rem;
-  margin-right: 15%;
-  margin-left: 0;
   z-index: 1;
   width: 90%;
   margin-left: auto;
@@ -43,7 +41,7 @@
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 400;
-  color: #111111;
+  color: #111;
   margin: 0 0 0.75rem;
   line-height: 1.2;
 }
@@ -51,7 +49,7 @@
 /* Description */
 .cnz-desc {
   font-size: clamp(0.875rem, 1.3vw, 14px);
-  color: #333333;
+  color: #333;
   line-height: 1.65;
   margin: 0 0 1.5rem;
 }
@@ -76,7 +74,7 @@
 /* Responsive */
 
 /* Large tablet and below */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .cnz-card {
     margin-right: 10%;
     margin-top: -5rem;
@@ -84,7 +82,7 @@
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .cnz-card {
     margin-right: 5%;
     margin-top: -4rem;
@@ -93,7 +91,7 @@
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .cnz-card {
     margin-right: 0;
     margin-top: -3rem;
@@ -105,6 +103,7 @@
     text-align: center;
   }
 }
+
 .adv-section .wallpapers-wrapper {
     padding: 0;
     margin: 0;

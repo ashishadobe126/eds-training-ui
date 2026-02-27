@@ -60,6 +60,7 @@
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
 }
+
 @media (width >= 900px) {
     .faq-accordion {
         width: 60%;
@@ -71,6 +72,7 @@
     line-height: 24px !important;
     color: #000;
 }
+
 /* .faq-accordion .accordion-item h3 {
     font-size: 16px !important;
     line-height: 24px !important;
@@ -81,6 +83,7 @@
 .faq-accordion strong {
     font-weight: 400 !important;
 }
+
 .accordion-item-label {
     border-bottom: 2px solid #ccc;
 }

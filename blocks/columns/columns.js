@@ -8,7 +8,7 @@ export default function decorate(block) {
     [...row.children].forEach((col) => {
       // Add simple incremental custom class to each individual column div
       col.classList.add(`custom-col-${colIndex}`);
-      colIndex++;
+      colIndex += 1;
 
       const pic = col.querySelector('picture');
       if (pic) {

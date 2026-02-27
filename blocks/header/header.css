@@ -5,7 +5,7 @@ header .nav-wrapper {
   z-index: 2;
   position: fixed;
   padding: 1.25rem 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(50 50 93 / 25%) 0 13px 27px -5px, rgb(0 0 0 / 30%) 0 8px 16px -8px;
 }
 
 header nav {
@@ -274,14 +274,17 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
 /* custom css for WKND */
 .default-content-wrapper h1 {
   margin: 0;
 }
+
 .default-content-wrapper h1 a {
   text-decoration: none;
   color: #000 !important;
 }
+
 .default-content-wrapper ul li a {
   text-decoration: none;
   padding: 15px 17px;
@@ -290,6 +293,7 @@ header nav .nav-tools {
   line-height: 20px;
   color: #000 !important;
 }
+
 .default-content-wrapper ul li a:hover {
   background-color: gold;
 }

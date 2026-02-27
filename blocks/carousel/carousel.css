@@ -150,8 +150,9 @@
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
   }
+
   .custom-carousel .carousel-slide .carousel-slide-content {
-    margin: 22rem 0 0 0;
+    margin: 22rem 0 0;
     width: 90%;
     background-color: #fff;
     color: #000;
@@ -161,15 +162,18 @@
 .home-section {
   padding-top: 40px;
 }
+
 .custom-carousel .carousel-slide {
   justify-content: flex-end;
   align-items: center;
 }
+
 .home-section .carousel-wrapper {
   padding: 0;
   margin: 0;
   max-width: fit-content;
 }
+
 .custom-carousel .carousel-slide-content a {
   padding: 1em 2.5em;
   text-align: center;
@@ -181,21 +185,26 @@
   cursor: pointer;
   text-decoration: none;
 }
+
 .custom-carousel .carousel-slide-content p:nth-of-type(1) {
   margin-bottom: 1rem;
 }
+
 .custom-carousel .carousel-slide-content p:nth-of-type(2) {
   margin-top: 1.5rem;
 }
+
 .custom-carousel .carousel-slide-indicators {
   background-color: transparent !important;
 }
+
 .custom-carousel .slide-prev, .custom-carousel .slide-next {
   background-color: transparent !important;
   border: none;
   cursor: pointer;
 }
-@media (min-width: 992px) {
+
+@media (width >= 992px) {
   .custom-carousel .carousel-navigation-buttons {
       bottom: -9%;
       z-index: 99;
@@ -206,15 +215,18 @@
       top: 100%;
   }
 }
+
 .custom-carousel .slide-prev:hover, .custom-carousel .slide-next:hover {
   background-color: transparent;
 }
+
 .custom-carousel .carousel-slide-indicators .carousel-slide-indicator button {
       background-color: transparent;
     border: 2px solid #202020;
     width: 16px;
     height: 16px;
 }
+
 .article-cards .cards-card-body a {
   background-color: transparent;
   border-radius: 0;
@@ -224,12 +236,15 @@
   border: none;
   color: #202020 !important;
 }
+
 .article-cards .cards-card-image p {
   margin: 0;
 }
+
 .article-cards .cards-card-body a:hover {
   background-color: transparent;
 }
+
 .article-cards .cards-card-body p:nth-of-type(2) {
   font-size: 16px;
   line-height: 22px;
@@ -238,6 +253,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 /* .article-cards {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5rem;
@@ -251,6 +267,7 @@
   border-bottom: 2px solid gold;
   width: fit-content;
 }
+
 .article-cards > ul > li {
   border: none !important;
 }
